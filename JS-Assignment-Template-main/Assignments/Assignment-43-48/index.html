@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment -43-48</title>
+</head>
+<body>
+    <h1>Assignment -43-48</h1> 
+
+<!-- Task-01. Show an alert box on click on a link. -->
+<h4>Task-01</h4>
+
+    <a href="#" onClick="popup('Hi');">Click me</a>
+
+<!-- Task-02. Display some Mobile images in browser. On click on an image Show the message in alert to user. -->
+<h4>Task-02</h4>
+
+
+  <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+    <h1 style="text-align: center;">Mobile Phone Lookup</h1>
+    <div class="image-container" style="display: flex; justify-content: center;">
+      <div class="image-box" style="margin-right: 10px; border: 1px solid black; border-radius: 10px; padding: 10px;">
+        <img src="https://images.pexels.com/photos/5053841/pexels-photo-5053841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onclick="showMessage('This is One of The Best Mobile');" width="300px" height="500px">
+      </div>
+      <div class="image-box" style="margin-right: 10px; border: 1px solid black; border-radius: 10px; padding: 10px;">
+        <img src="https://images.pexels.com/photos/4565778/pexels-photo-4565778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onclick="showMessage('I like Your Choice of Mobile.');" width="300px" height="500px">
+      </div>
+      <div class="image-box" style="margin-right: 10px; border: 1px solid black; border-radius: 10px; padding: 10px;">
+        <img src="https://images.pexels.com/photos/4565782/pexels-photo-4565782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onclick="showMessage('Thanks For Purchasing.');" width="300px" height="500px">
+      </div>
+    </div>
+  </div>
+
+
+<!-- Iask-03. Display 10 student records in table and each row should contain a delete button. If you click on a button to delete a record, entire row should be deleted.  -->
+<h4>Task-03</h4>
+
+<h1 style="display: flex; justify-content: center; align-items: center;">Students Record</h1>
+  <div style="display: flex; justify-content: center; align-items: center; height:60vh;">
+    <table style="border-collapse: collapse;">
+      <tr style="border: 1px solid black;">
+        <th style="padding: 8px;">Student ID</th>
+        <th style="padding: 8px;">Student Name</th>
+        <th style="padding: 8px;">Class</th>
+        <th style="padding: 8px;">Delete</th>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">1</td>
+        <td style="padding: 8px;">Basmah Javaid</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: fuchsia; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">2</td>
+        <td style="padding: 8px;">Irtiza Qaiser</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: mediumblue; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">3</td>
+        <td style="padding: 8px;">Mahrukh</td>
+        <td style="padding: 8px;">9</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: fuchsia; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">4</td>
+        <td style="padding: 8px;">Areeba Naeem</td>
+        <td style="padding: 8px;">9</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: mediumblue; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">5</td>
+        <td style="padding: 8px;">Rabia Muzammil</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: fuchsia; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">6</td>
+        <td style="padding: 8px;">Hamza rauf</td>
+        <td style="padding: 8px;">9</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: mediumblue; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">7</td>
+        <td style="padding: 8px;">Hammad ur Rehman</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: fuchsia; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">8</td>
+        <td style="padding: 8px;">Talha Kazmi</td>
+        <td style="padding: 8px;">9</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: mediumblue; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">9</td>
+        <td style="padding: 8px;">Muhammad Isamil</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: fuchsia; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+      <tr style="border: 1px solid black;">
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">Arooba</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;">
+          <button style="padding: 4px 8px; background-color: mediumblue; color: white; border: none; cursor: pointer;" onclick="deleteRow(this)">Delete</button>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+
+  <!-- Task-04. Display an image in browser. Change the picture on mouseover and set the first picture on mouseout. -->
+<h4>Task-04</h4>
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <img src="https://images.pexels.com/photos/133472/pexels-photo-133472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onMouseover="src='https://images.pexels.com/photos/5043776/pexels-photo-5043776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'" onMouseout="src='https://images.pexels.com/photos/133472/pexels-photo-133472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'" style="height: 600px; width: 400px; border: 5px solid #920882; border-radius: 10px;">
+  </div>
+
+
+  <!-- Task-05. Show a counter in browser. Counter should increase on click on increase button and decrease on click on decrease button. And show updated counter value in browser. -->
+  <h4>Task-05</h4>
+ 
+  <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <h1 style="font-size: 24px;">Counter</h1>
+    <div style="display: flex; align-items: center;">
+      <button onclick="decreaseCounter()" style="font-size: 20px; padding: 5px 10px; border: 2px solid black; border-radius: 5px; background-color: #51bdde;">-</button>
+      <h2 id="counterValue" style="font-size: 24px; margin: 0 10px;">0</h2>
+      <button onclick="increaseCounter()" style="font-size: 20px; padding: 5px 10px; border: 2px solid black; border-radius: 5px; background-color: #51bdde;">+</button>
+    </div>
+  </div>
+    
+    <script src="./app.js">
+    </script>
+</body>
+</html>

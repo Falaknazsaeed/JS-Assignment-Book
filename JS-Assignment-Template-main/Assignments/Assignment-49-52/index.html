@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment -49-52 </title>
+</head>
+<body>
+    <h1>Assignment -49-52 </h1>
+
+<!-- Task-01. Create a signup form and display form data in your web page on submission -->
+<h4>Task-01</h4>
+
+  <div class="container" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #7fb3e1; border-radius: 10px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Signup Form</h2>
+    <form id="signupForm" onsubmit="displayFormData(event)">
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" placeholder="Enter your first name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" onFocus="this.style.backgroundColor='#eeb5f7';" onBlur="this.style.backgroundColor='white';">
+      </div>
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" placeholder="Enter your last name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" onFocus="this.style.backgroundColor='#eeb5f7';" onBlur="this.style.backgroundColor='white';">
+      </div>
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" onFocus="this.style.backgroundColor='#eeb5f7';" onBlur="this.style.backgroundColor='white';">
+      </div>
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" onFocus="this.style.backgroundColor='#eeb5f7';" onBlur="this.style.backgroundColor='white';">
+      </div>
+      <div class="form-group" style="margin-bottom: 15px; text-align: center;">
+        <input type="submit" value="Signup" style="width: 50%; padding: 10px; background-color: #871d8d; border: none; color: #fff; font-weight: bold; border-radius: 10px; cursor: pointer;">
+      </div>
+    </form>
+  </div>
+  
+  <div id="formData" style="text-align: center;"></div>
+
+<!-- Task-02. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read more” button, full detail of that particular item will be displayed.  -->
+<h4>Task-02</h4>
+
+<h1>Wall Lamp</h1>
+<div style="padding: 10px;">
+ <img src="https://images.pexels.com/photos/6186511/pexels-photo-6186511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" style="height: 300px; width: 200px; border: 5px solid #89591e; border-radius: 10px;">
+ <h2>Item Details</h2>
+ <div id="itemdetails">
+ <p>Here are some details about the item:
+  <ul>
+    <li>Item Color: Golden</li>
+    <li>Material: Metal</li>
+    <li>Style: vintage</li>
+    </ul>
+  </p>
+  <a href="javascript:void(0);" onClick="expandedItemDetails();"><em>Click for more.</em></a>
+</div>
+</div>
+
+
+<!-- Task-03 Create a form which takes student’s details and show each student detail in table. Each row of table must contain a delete button and an edit button. On click on delete button entire row should be deleted. On click on edit button, a hidden form will appear with the values of that row. -->
+<h4>Task-03</h4>
+
+
+<h2 style="margin-bottom: 10px;">Student Details</h2>
+<form id="studentForm" onsubmit="addStudent(event)" style="margin-bottom: 20px;">
+  <div style="margin-bottom: 10px;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required style="width: 200px;">
+  </div>
+  <div style="margin-bottom: 10px;">
+    <label for="age">Age:</label>
+    <input type="number" id="age" required style="width: 210px;">
+  </div>
+  <div style="margin-bottom: 10px;">
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade" required style="width: 200px;">
+  </div>
+  <div>
+    <input type="submit" value="Add Student" style="padding: 5px 10px; background-color: #9f053e; border: none; border-radius: 10px; color: #fff; cursor: pointer;">
+  </div>
+</form>
+
+<table id="studentTable" style="border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="padding: 8px; border: 1px solid #ddd;">Name</th>
+      <th style="padding: 8px; border: 1px solid #ddd;">Age</th>
+      <th style="padding: 8px; border: 1px solid #ddd;">Grade</th>
+      <th style="padding: 8px; border: 1px solid #ddd;">Action</th>
+    </tr>
+  </thead>
+  <tbody id="studentTableBody"></tbody>
+</table>
+
+<div id="editFormContainer" style="display: none;">
+  <h2>Edit Student</h2>
+  <form id="editForm" onsubmit="updateStudent(event)" style="margin-bottom: 20px;">
+    <input type="hidden" id="editRowIndex">
+    <div style="margin-bottom: 10px;">
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" required style="width: 200px;">
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label for="editAge">Age:</label>
+      <input type="number" id="editAge" required style="width: 210px;">
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label for="editGrade">Grade:</label>
+      <input type="text" id="editGrade" required style="width: 200px;">
+    </div>
+    <div>
+      <input type="submit" value="Update Student" style="padding: 5px 10px; background-color: #b94810; border: none; border-radius: 10px; color: #fff; cursor: pointer;">
+      <button type="button" onclick="cancelEdit()" style="padding: 5px 10px; background-color: #43086f; border: none; border-radius: 10px; color: #fff; cursor: pointer;">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+    
+    <script src="./app.js">
+    </script>
+</body>
+</html>
